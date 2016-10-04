@@ -53,7 +53,7 @@ System.out.println("La opcion elegida es: " +  menu());
     public static double solicitarDatos(String tipo){
         double dato;
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Introduzca el valor de " + tipo + " : ");
+        System.out.print("Eliga una opcion a calcular " + tipo + " : ");
         dato = entrada.nextDouble();
         return dato;
     }
@@ -62,7 +62,7 @@ System.out.println("La opcion elegida es: " +  menu());
             public static float areaCuadrado(){
                 float area;
                 double a;
-                a = solicitarDatos("un lado");
+                a = solicitarDatos("Solicitar el lado del cuadrado");
                 area = (float) Math.pow(a, 2);
                 return area;
         }
@@ -72,8 +72,17 @@ System.out.println("La opcion elegida es: " +  menu());
             double r;
             final double pi;
             pi = 3.14;
-            r = solicitarDatos("el radio");
+            r = solicitarDatos("Presentar el Radio porfavor");
             area = (float) (pi*Math.pow(r, 2));
+            return area;
+            }
+         if ("opcion".equals(3)){
+             public static float areaTriangulo(){
+            float area;
+            double b,h ;
+            b = SolicitarDatos("Presentar la base del trianfgulo")
+            h = SolicitarDatos("muestra la altura del triangulo")
+            area = ((b*h)/2)
             return area;
     }
 }
