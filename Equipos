@@ -1,0 +1,35 @@
+package homework.pkg1.p2;
+import java.util.*;
+/**
+ *
+ * @author Alejandro
+ */
+public class Equipos {
+    private char equipo;
+    private ArrayList <Alumnos> alumno;
+    
+    public Equipos(char equipo) {
+        this.equipo = equipo;// debe de recibir si es de primero segundo o tercer año o ingeniero o licenciado
+        this.alumno = new ArrayList();
+        
+    }
+    public char getEquipo(){
+        return equipo;
+    }
+    public boolean addAlumno(Alumnos alumno){
+        for(Alumnos temp : this.alumno) {
+            if(temp.getNombre().equalsIgnoreCase(alumno.getNombre())){
+                return false;
+            }
+        }
+        return true;
+    }
+    @Override
+    public String toString(){
+        String string = " Equipo = " + this.getEquipo() + " Alumno = ";
+        for (Alumnos student : alumno) {
+            string += "Name = " + student.getNombre() + " ID = " + student.getMatricula();
+        }
+        return string;
+    }
+}
