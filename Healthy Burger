@@ -1,7 +1,12 @@
-public class HealthyBurger extends Hamburger {
-    public HealthyBurger(String meat, double price) {
-        super("brown rye", meat, price);
-        type="HealthyBurger";
+public class HealthyBurger extends Hamburguer{
+
+    public HealthyBurger(String breadType,String meatType, double price) {
+        super(breadType, meatType, price);
         limAdditions=6;
+    }
+    @Override
+    public void getTotal(){
+        System.out.println("This is a Healthy Burguer");
+        super.getTotal();
     }
 }
