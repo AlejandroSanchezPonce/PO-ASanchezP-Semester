@@ -22,4 +22,5 @@ public class Addition {
     public void setPrice(double price) {
         this.price = price;
     }   
+
 }
